@@ -1,37 +1,37 @@
-#N canvas 138 148 534 425 10;
-#X obj -26 -5 cnv 15 100 300 empty empty empty 20 12 0 14 -257985 -33289
+#N canvas 193 148 645 486 10;
+#X obj -3 -14 cnv 15 640 480 empty empty Operator 300 12 0 24 -1 -262144
 0;
-#X obj 34 17 knob 32 32 0 127 0 0 pitch-time 0 Time 0 -8 0 8 -262144
+#X obj -1 24 cnv 15 350 80 empty empty tom 130 12 0 14 -261234 -33289
+0;
+#X obj 53 54 knob 32 32 0 1000 0 0 pitch-time 0 Time 0 -8 0 8 -262144
 -1 -1 0 1;
-#X obj 10 120 knob 32 32 0 127 0 0 dec 0 D -16 16 0 8 -262144 -1 -1
-1100 1;
-#X obj 9 69 knob 32 32 0 127 0 0 att 0 A -16 16 0 8 -262144 -1 -1 1400
-1;
-#X obj -10 19 knob 32 32 0 127 0 0 pitch 0 Pitch 0 -8 0 8 -262144 -1
--1 0 1;
-#X obj 286 13 knob 32 32 0 127 0 0 snare-volume 0 SnareV 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 10 170 knob 32 32 0 127 0 0 sus 0 S -16 16 0 8 -262144 -1 -1
-1500 1;
-#X obj -24 353 glitch-drums-interactive;
-#X obj 9 222 knob 32 32 0 127 0 0 res 0 R -16 16 0 8 -262144 -1 -1
-1700 1;
-#X obj 75 -4 cnv 15 120 80 empty empty Square-destr 20 12 0 14 -233017
+#X obj 206 55 knob 32 32 0 127 0 0 dec 0 D 14 -10 0 8 -262144 -1 -1
+0 1;
+#X obj 158 54 knob 32 32 0 127 0 0 att 0 A 14 -10 0 8 -262144 -1 -1
+0 1;
+#X obj 9 54 knob 32 32 0 5 0 0 pitch 0 Pitch 0 -8 0 8 -262144 -1 -1
+0 1;
+#X obj 253 55 knob 32 32 0 127 0 0 sus 0 S 14 -10 0 8 -262144 -1 -1
+0 1;
+#X obj 1 198 glitch-drums-interactive;
+#X obj 303 55 knob 32 32 0 127 0 0 res 0 R 14 -10 0 8 -262144 -1 -1
+0 1;
+#X obj 354 24 cnv 15 120 80 empty empty Square-destr 20 12 0 14 -233017
 -66577 0;
-#X obj 87 48 s~ square-in;
-#X obj 291 57 r~ snare;
-#X obj 357 57 r~ el-grid;
-#X obj 201 2 r mid-in;
-#X obj 75 115 cnv 15 300 180 empty empty MIXER_ARGH 20 12 0 14 -13381
--262144 0;
-#X obj 93 163 knob 32 32 0 127 0 0 vol-tom 0 tom 0 -8 0 8 -13381 -1
+#X obj 363 57 s~ square-in;
+#X obj 362 85 r mid-in;
+#X obj -1 108 cnv 15 350 80 empty empty MIXER_ARGH 120 12 0 14 -261234
+-1 0;
+#X obj 18 148 knob 32 32 0 1 0 0 vol-tom 0 tom 0 -8 0 8 -13381 -1 -1
+0 1;
+#X obj 67 147 knob 32 32 0 1 0 0 vol-bss 0 Bass 0 -8 0 8 -262144 -1
 -1 0 1;
-#X obj 142 162 knob 32 32 0 127 0 0 vol-bss 0 Bass 0 -8 0 8 -262144
+#X obj 115 147 knob 32 32 0 1 0 0 vol-grid 0 Grid 0 -8 0 8 -262144
 -1 -1 0 1;
-#X obj 191 161 knob 32 32 0 127 0 0 vol-grid 0 Grid 0 -8 0 8 -262144
+#X obj 163 146 knob 32 32 0 0.5 0 0 us-level 0 US-vol 0 -8 0 8 -262144
 -1 -1 0 1;
-#X obj 244 161 knob 32 32 0 0.5 0 0 us-level 0 US-vol 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 93 244 knob 36 36 0 1 0 0 vol-mix-out 0 MixVol 0 -8 0 8 -262144
+#X obj 293 143 knob 36 36 0 1 0 0 vol-mix-out 0 MixVol 0 -8 0 8 -262144
 -258113 -1 0 1;
-#X obj 143 355 electric-party;
+#X obj 168 197 electric-party;
+#X obj 217 144 knob 32 32 0 1 0 0 snare-volume 0 SnareV 0 -8 0 8 -262144
+-1 -1 0 1;
