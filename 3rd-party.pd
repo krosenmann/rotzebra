@@ -1,38 +1,30 @@
-#N canvas 909 138 450 427 10;
+#N canvas 248 209 450 427 10;
 #X obj -26 -5 cnv 15 100 300 empty empty empty 20 12 0 14 -257985 -33289
 0;
 #X obj 34 17 knob 32 32 0 127 0 0 pitch-time 0 Time 0 -8 0 8 -262144
--1 -1 3100 1;
+-1 -1 0 1;
 #X obj 10 120 knob 32 32 0 127 0 0 dec 0 D -16 16 0 8 -262144 -1 -1
-524 1;
-#X obj 9 69 knob 32 32 0 127 0 0 att 0 A -16 16 0 8 -262144 -1 -1 0
+1100 1;
+#X obj 9 69 knob 32 32 0 127 0 0 att 0 A -16 16 0 8 -262144 -1 -1 1400
 1;
 #X obj -10 19 knob 32 32 0 127 0 0 pitch 0 Pitch 0 -8 0 8 -262144 -1
--1 1500 1;
+-1 0 1;
 #X obj 286 13 knob 32 32 0 127 0 0 snare-volume 0 SnareV 0 -8 0 8 -262144
 -1 -1 0 1;
 #X obj 10 170 knob 32 32 0 127 0 0 sus 0 S -16 16 0 8 -262144 -1 -1
 1500 1;
 #X obj -24 353 glitch-drums-interactive;
 #X obj 9 222 knob 32 32 0 127 0 0 res 0 R -16 16 0 8 -262144 -1 -1
-0 1;
+1700 1;
 #X obj -16 274 r~ tom;
 #X obj 75 -4 cnv 15 120 80 empty empty Square-destr 20 12 0 14 -233017
 -66577 0;
 #X obj 89 23 s~ square-in;
 #X obj 89 46 r~ square-out;
 #X obj 215 13 knob 32 32 0 0.5 0 0 us-level 0 US-vol 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 700 1;
 #X obj 216 58 r~ us-out;
 #X obj 291 57 r~ snare;
 #X obj 357 57 r~ el-grid;
 #X obj 90 90 r mid-in;
 #X obj 117 306 output~;
-#X connect 9 0 18 0;
-#X connect 9 0 18 1;
-#X connect 14 0 18 0;
-#X connect 14 0 18 1;
-#X connect 15 0 18 1;
-#X connect 15 0 18 0;
-#X connect 16 0 18 0;
-#X connect 16 0 18 1;
