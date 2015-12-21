@@ -1,4 +1,4 @@
-#N canvas 193 148 645 486 10;
+#N canvas 490 162 672 482 10;
 #X obj -3 -14 cnv 15 640 480 empty empty Operator 300 12 0 24 -1 -262144
 0;
 #X obj -1 24 cnv 15 350 80 empty empty tom 130 12 0 14 -261234 -33289
@@ -35,3 +35,48 @@
 #X obj 168 197 electric-party;
 #X obj 217 144 knob 32 32 0 1 0 0 snare-volume 0 SnareV 0 -8 0 8 -262144
 -1 -1 0 1;
+#X obj 0 225 cnv 15 350 200 empty empty Parameters 20 12 0 18 -261234
+-1 0;
+#X obj 55 280 tgl 18 0 empty empty tom -26 7 0 13 -262144 -1 -1 0 1
+;
+#X obj 55 298 tgl 18 0 empty empty square -48 7 0 13 -262144 -1 -1
+0 1;
+#X obj 55 316 tgl 18 0 empty empty grid -34 7 0 13 -262144 -1 -1 0
+1;
+#X obj 55 334 tgl 18 0 empty empty US -18 7 0 13 -262144 -1 -1 0 1
+;
+#X obj 55 352 tgl 18 0 empty empty snare -42 7 0 13 -262144 -1 -1 0
+1;
+#X obj 76 280 tgl 18 0 empty empty empty -26 7 0 13 -262144 -1 -1 0
+1;
+#X obj 76 298 tgl 18 0 empty empty empty -48 7 0 13 -262144 -1 -1 0
+1;
+#X obj 76 316 tgl 18 0 empty empty empty -34 7 0 13 -262144 -1 -1 0
+1;
+#X obj 76 334 tgl 18 0 empty empty empty -18 7 0 13 -262144 -1 -1 0
+1;
+#X obj 76 352 tgl 18 0 empty empty empty -42 7 0 13 -262144 -1 -1 0
+1;
+#X obj 97 280 tgl 18 0 empty empty empty -26 7 0 13 -262144 -1 -1 0
+1;
+#X obj 97 298 tgl 18 0 empty empty empty -48 7 0 13 -262144 -1 -1 0
+1;
+#X obj 97 316 tgl 18 0 empty empty empty -34 7 0 13 -262144 -1 -1 0
+1;
+#X obj 97 334 tgl 18 0 empty empty empty -18 7 0 13 -262144 -1 -1 0
+1;
+#X obj 97 352 tgl 18 0 empty empty empty -42 7 0 13 -262144 -1 -1 0
+1;
+#X obj 118 280 tgl 18 0 0 0 empty -26 7 0 13 -262144 -1 -1 0 1;
+#X obj 118 298 tgl 18 0 0 0 empty -48 7 0 13 -262144 -1 -1 0 1;
+#X obj 118 316 tgl 18 0 empty empty empty -34 7 0 13 -262144 -1 -1
+0 1;
+#X obj 118 334 tgl 18 0 empty empty empty -18 7 0 13 -262144 -1 -1
+0 1;
+#X obj 118 352 tgl 18 0 empty empty empty -42 7 0 13 -262144 -1 -1
+0 1;
+#N canvas 293 382 506 378 canv 0;
+#X obj -91 17 bng 15 250 50 0 empty empty empty 0 -6 0 10 -4034 -1
+-1;
+#X coords 0 -1 1 1 300 150 2 100 100;
+#X restore 354 109 pd canv;
