@@ -1,35 +1,35 @@
-#N canvas 397 190 450 300 10;
+#N canvas 728 281 450 300 10;
 #X obj -7 -16 cnv 15 300 200 empty empty E-Piano 110 12 1 20 -13330
 -262144 0;
 #X obj 214 43 knob 32 32 0 20 0 0 p-vib empty Vibrato 0 -10 0 12 -262144
 -262144 -262144 0 1;
-#N canvas 52 87 1313 675 Phds 0;
-#N canvas 422 303 450 408 piano 0;
-#X obj 40 177 osc~;
-#X obj 154 3 inlet;
-#X obj 223 6 inlet;
+#N canvas 170 143 1313 675 Phds 1;
+#N canvas 599 205 606 500 piano 1;
+#X obj 86 166 osc~;
+#X obj 254 -17 inlet;
+#X obj 326 -5 inlet;
 #X obj 157 331 outlet~;
-#X obj 165 84 mtof;
+#X obj 155 84 mtof;
 #X obj 159 287 *~;
-#X obj 165 41 stripnote;
-#X obj 199 195 vline~;
-#X msg 250 100 1 \$2 \, \$4 \$3 \$2;
-#X msg 345 164 0 \$2;
-#X obj 255 66 pack f f f f;
-#X obj 252 33 r att;
-#X obj 300 33 r dec;
-#X obj 343 32 r sus;
-#X obj 401 36 r inp1;
-#X obj 369 118 pack f f;
-#X obj 354 91 sel 0;
+#X obj 159 25 stripnote;
+#X obj 271 232 vline~;
+#X msg 301 122 1 \$2 \, \$4 \$3 \$2;
+#X msg 396 186 0 \$2;
+#X obj 306 88 pack f f f f;
+#X obj 303 55 r att;
+#X obj 351 55 r dec;
+#X obj 394 54 r sus;
+#X obj 452 58 r inp1;
+#X obj 420 140 pack f f;
+#X obj 405 113 sel 0;
 #X obj 73 71 loadbang;
 #X msg 61 104 0.25;
 #X obj 155 163 osc~;
 #X obj 161 128 * 2;
-#X obj 125 217 *~ 0.25;
+#X obj 121 207 *~ 0.25;
 #X obj 99 243 +~;
+#X obj 164 -7 notein;
 #X connect 0 0 22 0;
-#X connect 1 0 6 0;
 #X connect 2 0 6 1;
 #X connect 2 0 16 0;
 #X connect 4 0 0 0;
@@ -54,6 +54,8 @@
 #X connect 20 0 19 0;
 #X connect 21 0 22 1;
 #X connect 22 0 5 0;
+#X connect 23 0 6 0;
+#X connect 23 1 6 1;
 #X restore 76 150 pd piano;
 #X obj 320 354 outlet~;
 #N canvas 51 0 1315 675 sevenvoice 0;
@@ -450,15 +452,15 @@
 #X connect 24 0 11 0;
 #X restore 240 154 pd Phds;
 #X obj 112 41 knob 32 32 0 0.5 0 0 p-vol empty Volume 0 -8 0 12 -13330
--228856 -262144 2100 1;
+-228856 -262144 0 1;
 #X obj 15 124 knob 32 32 0 300 0 0 att empty empty 0 -8 0 8 -262144
--1 -1 0 1;
+-1 -1 300 1;
 #X obj 55 124 knob 32 32 0 500 0 0 dec empty empty 0 -8 0 8 -262144
--1 -1 1600 1;
+-1 -1 1000 1;
 #X obj 100 124 knob 32 32 0 1 0 0 sus empty empty 0 -8 0 8 -262144
--1 -1 1300 1;
+-1 -1 1000 1;
 #X obj 158 122 knob 32 32 0 1000 0 0 inp1 empty empty 0 -8 0 8 -262144
--1 -1 1600 1;
+-1 -1 1400 1;
 #X msg 25 86 1;
 #X obj 248 212 dac~;
 #X connect 2 0 9 0;
