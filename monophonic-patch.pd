@@ -1,4 +1,4 @@
-#N canvas 221 159 1099 601 10;
+#N canvas 709 82 656 685 10;
 #X obj 221 107 triangle-wave;
 #X obj 331 108 square-wave;
 #X obj 415 110 osc~;
