@@ -77,26 +77,30 @@
 #X obj 118 352 tgl 18 0 empty empty empty -42 7 0 13 -262144 -1 -1
 0 1;
 #X obj 957 186 image textures/Wood.gif;
-#X obj 675 47 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+#N canvas 132 278 450 300 ampmod 0;
+#X obj 110 124 knob 32 32 0 1 0 0 amp empty AMP 0 -12 0 15 -262144
 -1 -1 0 1;
-#X obj 763 110 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+#X floatatom 165 119 5 0 0 0 - amp -;
+#X obj 286 70 inlet~;
+#X obj 291 203 outlet~;
+#X obj 369 70 inlet~;
+#X obj 291 174 r~ ampmOut;
+#X obj 287 105 s~ ampcar;
+#X obj 370 105 s~ ampmod;
+#X connect 2 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 3 0;
+#X coords 0 -1 1 1 120 60 2 100 100;
+#X restore 886 36 pd ampmod;
+#N canvas 332 220 450 300 ring 0;
+#X obj 110 123 knob 32 32 0 110 0 0 ring empty RING 0 -12 0 15 -262144
 -1 -1 0 1;
-#X obj 720 110 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 674 109 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
-#X obj 764 49 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 0 1;
-#N canvas 460 372 450 300 amplitude 0;
-#X obj 105 123 knob 32 32 0 110 0 0 ring empty RING 0 -12 0 15 -262144
--1 -1 0 1;
-#X obj 333 90 s~ plugRing;
-#X obj 334 53 inlet~;
-#X floatatom 172 111 5 0 0 0 - ring -;
-#X obj 334 129 r~ ringOut;
-#X obj 334 162 outlet~;
+#X obj 272 69 s~ plugRing;
+#X obj 273 32 inlet~;
+#X floatatom 177 111 5 0 0 0 - ring -;
+#X obj 273 108 r~ ringOut;
+#X obj 273 141 outlet~;
 #X connect 2 0 1 0;
 #X connect 4 0 5 0;
-#X coords 0 -1 1 1 160 60 2 100 100;
-#X restore 851 52 pd amplitude;
-#X obj 895 148 adc~;
+#X coords 0 -1 1 1 120 60 2 100 100;
+#X restore 753 37 pd ring;
