@@ -1,4 +1,4 @@
-#N canvas 52 82 656 685 10;
+#N canvas 51 54 1315 714 10;
 #X obj -3 -14 cnv 15 640 480 empty empty Operator 300 12 0 24 -1 -262144
 0;
 #X obj -1 24 cnv 15 350 80 empty empty tom 130 12 0 14 -261234 -33289
@@ -91,7 +91,7 @@
 #X connect 4 0 7 0;
 #X connect 5 0 3 0;
 #X coords 0 -1 1 1 120 60 2 100 100;
-#X restore 821 73 pd ampmod;
+#X restore 852 43 pd ampmod;
 #N canvas 332 220 450 300 ring 0;
 #X obj 110 123 knob 32 32 0 110 0 0 ring empty RING 0 -12 0 15 -262144
 -1 -1 3100 1;
@@ -103,7 +103,7 @@
 #X connect 2 0 1 0;
 #X connect 4 0 5 0;
 #X coords 0 -1 1 1 120 60 2 100 100;
-#X restore 691 72 pd ring;
+#X restore 722 42 pd ring;
 #N canvas 192 371 450 300 phsn 0;
 #X obj 123 123 knob 32 32 0 1 0 0 frqm empty FRQM 0 -12 0 12 -262144
 -1 -1 0 1;
@@ -117,7 +117,7 @@
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;
 #X coords 0 -1 1 1 85 60 2 100 100;
-#X restore 951 73 pd phsn;
+#X restore 982 43 pd phsn;
 #N canvas 222 299 450 300 hsnmd 0;
 #X obj 104 121 knob 32 32 0 127 0 0 phasemod empty PHZz 0 -12 0 12
 -262144 -1 -1 24 1;
@@ -131,4 +131,4 @@
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;
 #X coords 0 -1 1 1 85 60 2 100 100;
-#X restore 1046 73 pd hsnmd;
+#X restore 1077 43 pd hsnmd;
