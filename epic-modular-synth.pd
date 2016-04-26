@@ -1,4 +1,4 @@
-#N canvas 385 258 870 539 10;
+#N canvas 320 386 870 539 10;
 #X obj 146 31 notein;
 #X obj 146 70 poly 7 1;
 #X obj 225 57 / 127;
@@ -19,7 +19,7 @@
 #X obj 531 239 unpack 0 0;
 #X obj 513 281 monophonic-patch;
 #X obj 201 337 /~ 7;
-#X obj 201 384 outlet~;
+#X obj 201 384 s~ ems~;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 3 0;

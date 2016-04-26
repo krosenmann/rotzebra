@@ -1,4 +1,4 @@
-#N canvas 51 54 1315 714 10;
+#N canvas 51 54 1389 846 10;
 #X obj -3 -14 cnv 15 640 480 empty empty Operator 300 12 0 24 -1 -262144
 0;
 #X obj -1 24 cnv 15 350 80 empty empty tom 130 12 0 14 -261234 -33289
@@ -79,7 +79,7 @@
 #X obj 958 186 image textures/Wood.gif;
 #N canvas 130 283 450 300 ampmod 0;
 #X obj 110 124 knob 32 32 0 1 0 0 amp empty AMP 0 -12 0 15 -262144
--1 -1 0 1;
+-1 -1 300 1;
 #X floatatom 165 119 5 0 1 0 - amp -;
 #X obj 286 70 inlet~;
 #X obj 291 203 outlet~;
@@ -91,10 +91,10 @@
 #X connect 4 0 7 0;
 #X connect 5 0 3 0;
 #X coords 0 -1 1 1 120 60 2 100 100;
-#X restore 852 43 pd ampmod;
-#N canvas 332 220 450 300 ring 0;
+#X restore 790 81 pd ampmod;
+#N canvas 749 502 450 300 ring 0;
 #X obj 110 123 knob 32 32 0 110 0 0 ring empty RING 0 -12 0 15 -262144
--1 -1 3100 1;
+-1 -1 800 1;
 #X obj 272 69 s~ plugRing;
 #X obj 273 32 inlet~;
 #X floatatom 177 111 5 0 0 0 - ring -;
@@ -103,10 +103,10 @@
 #X connect 2 0 1 0;
 #X connect 4 0 5 0;
 #X coords 0 -1 1 1 120 60 2 100 100;
-#X restore 722 42 pd ring;
+#X restore 660 82 pd ring;
 #N canvas 192 371 450 300 phsn 0;
 #X obj 123 123 knob 32 32 0 1 0 0 frqm empty FRQM 0 -12 0 12 -262144
--1 -1 0 1;
+-1 -1 1500 1;
 #X obj 188 53 inlet~;
 #X obj 188 95 s~ frqCarrier;
 #X obj 280 52 inlet~;
@@ -117,10 +117,10 @@
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;
 #X coords 0 -1 1 1 85 60 2 100 100;
-#X restore 982 43 pd phsn;
+#X restore 919 80 pd phsn;
 #N canvas 222 299 450 300 hsnmd 0;
 #X obj 104 121 knob 32 32 0 127 0 0 phasemod empty PHZz 0 -12 0 12
--262144 -1 -1 24 1;
+-262144 -1 -1 0 1;
 #X obj 237 85 inlet~;
 #X obj 238 129 s~ plugBase;
 #X obj 326 87 inlet~;
@@ -131,4 +131,32 @@
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;
 #X coords 0 -1 1 1 85 60 2 100 100;
-#X restore 1077 43 pd hsnmd;
+#X restore 1016 80 pd hsnmd;
+#X obj 1138 66 scope~ 130 130 256 3 128 -1 1 0 0 0 0 102 255 51 135
+135 135 0;
+#N canvas 900 350 450 300 lowpass 0;
+#X obj 223 67 inlet~;
+#X obj 221 130 lop~;
+#X obj 120 125 knob 32 32 8.8 880 1 0 empty empty CutOff 0 -12 0 12
+-262144 -1 -1 0 1;
+#X obj 213 209 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X coords 0 -1 1 1 85 60 2 100 100;
+#X restore 676 186 pd lowpass;
+#X obj 798 328 output~;
+#X obj 703 269 s~ out;
+#X obj 940 216 knob 32 32 0 127 0 0 decM 0 D 14 -10 0 8 -262144 -1
+-1 1000 1;
+#X obj 895 217 knob 32 32 0 127 0 0 attM 0 A 14 -10 0 8 -262144 -1
+-1 400 1;
+#X obj 987 216 knob 32 32 0 127 0 0 susM 0 S 14 -10 0 8 -262144 -1
+-1 600 1;
+#X obj 1037 216 knob 32 32 0 127 0 0 resM 0 R 14 -10 0 8 -262144 -1
+-1 0 1;
+#X obj 826 298 r~ ems~;
+#X obj 1214 406 epic-modular-synth;
+#X connect 42 0 46 0;
+#X connect 46 0 48 0;
+#X connect 53 0 47 0;

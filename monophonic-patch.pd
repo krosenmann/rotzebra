@@ -1,4 +1,4 @@
-#N canvas 709 82 656 685 10;
+#N canvas 1642 304 656 685 10;
 #X obj 221 107 triangle-wave;
 #X obj 331 108 square-wave;
 #X obj 415 110 osc~;
@@ -66,7 +66,11 @@
 #X obj 198 272 r attM;
 #X obj 246 272 r decM;
 #X obj 289 271 r susM;
-#X obj 347 275 r inp1M;
+#X obj 347 275 r resM;
+#X floatatom 347 234 5 0 0 0 - - -;
+#X floatatom 388 237 5 0 0 0 - - -;
+#X floatatom 436 242 5 0 0 0 - - -;
+#X floatatom 472 243 5 0 0 0 - - -;
 #X connect 0 0 17 0;
 #X connect 1 0 18 0;
 #X connect 2 0 19 0;
@@ -118,6 +122,10 @@
 #X connect 62 0 61 0;
 #X connect 63 0 54 0;
 #X connect 64 0 60 1;
+#X connect 64 0 68 0;
 #X connect 65 0 60 2;
+#X connect 65 0 69 0;
 #X connect 66 0 60 3;
+#X connect 66 0 70 0;
 #X connect 67 0 61 1;
+#X connect 67 0 71 0;
